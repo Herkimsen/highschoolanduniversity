@@ -1,7 +1,8 @@
 # 2024 yılında YKS ile Türkiye'deki liselerin üniversitelerin hangi bölümlerine öğrenci mezun ettğini gösteren bir web uygulaması.
-
-
-## Uygulamayı yerel makinemde nasıl çalıştırabilirim
+Python yazılım dilini kullanarak yök sayfası üzerinde web scraping işlemini gerçekleştirdim.Daha sonrasında da node.js express gibi backend teknolojilerini kullanarak web scraping işleminden elde etmiş olduğum verileri sqlite db ile web arayüzünde sundum.
+<br>
+<br>
+## Peki uygulamayı yerel makinemde nasıl çalıştırabilirim?
 
 Bilgisayarınızda host edebilmek için ihtiyacınız olan tek şey bilgisayarınızda node.js uygulamasının yüklü olmasıdır.
 Internet üzerinden node.js uygulamasının nasıl yüklenebileceğinize bakabilirsiniz.
