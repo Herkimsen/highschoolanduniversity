@@ -11,3 +11,4 @@ web uygulamasını başlatmanızdır.Web uygulamanız localhost:5003 adresinde b
 <br>
 <br>
 ### Web uygulamasını sunucu üzerinde görmek isteyenlere:https://yks-2024-yerlestirme-sonuclari.glitch.me/
+YEDEK link:https://remotebackend-3dwe.onrender.com/
