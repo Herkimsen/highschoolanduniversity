@@ -73,6 +73,33 @@ function bringList(selectedSchool){
 
 }
 
+let counter=0;
+
+let previousindex;
+
+function toggleStyle(index){
+
+
+if(!(document.querySelector("#searchResult"+index).classList.contains("selected"))){
+
+
+if(counter==1){
+    document.querySelector("#searchResult"+previousindex).classList.remove("selected");
+
+    document.querySelector("#searchResult"+index).classList.add("selected");
+    counter--;
+  }
+
+
+document.querySelector("#searchResult"+index).classList.add("selected");
+
+counter++;
+previousindex=index;
+}
+
+
+}
+
 
 
 searchBarElement.addEventListener("keyup",(eventObj)=>{
@@ -96,7 +123,7 @@ searchBarElement.addEventListener("keyup",(eventObj)=>{
         
         if(anotherResult[i]!=undefined){
 
-        filteredListElement.innerHTML+=`<p style="font-size: 12px;"><span style="cursor: pointer;" onclick="bringList('${anotherResult[i].item.school_name}');">${anotherResult[i].item.school_name} </span></p>`;
+        filteredListElement.innerHTML+=`<p style="font-size: 12px;" id="searchResult${i}"><span style="cursor: pointer;" onclick="bringList('${anotherResult[i].item.school_name}');toggleStyle(${i})">${anotherResult[i].item.school_name} </span></p>`;
 
         }  
 
