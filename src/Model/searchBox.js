@@ -3,6 +3,7 @@ const searchBarElement = document.querySelector('.js-searchBar');
 let listShowcaseElement = document.querySelector("#js-resultShowCase");
 let filteredListElement = document.querySelector("#list");
 
+searchBarElement.disabled=true;
 let fuse = undefined;
 let arrayLength=0;
 let dataRowHtml=``;
@@ -18,7 +19,8 @@ const options = {
 veriGetir().then(result=>{
   //console.log(result)
   fuse = new Fuse(objArr, options);
-
+  searchBarElement.disabled=false;
+  searchBarElement.placeholder="Lise ismini giriniz";
 }
 );
 
@@ -123,7 +125,7 @@ searchBarElement.addEventListener("keyup",(eventObj)=>{
         
         if(anotherResult[i]!=undefined){
 
-        filteredListElement.innerHTML+=`<p style="font-size: 12px;" id="searchResult${i}"><span style="cursor: pointer;" onclick="bringList('${anotherResult[i].item.school_name}');toggleStyle(${i})">${anotherResult[i].item.school_name} </span></p>`;
+        filteredListElement.innerHTML+=`<p style="font-size: 12px;"><span style="cursor: pointer;" id="searchResult${i}" onclick="bringList('${anotherResult[i].item.school_name}');toggleStyle(${i});">${anotherResult[i].item.school_name} </span></p>`;
 
         }  
 
