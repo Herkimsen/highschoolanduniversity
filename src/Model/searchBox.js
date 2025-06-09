@@ -125,7 +125,7 @@ searchBarElement.addEventListener("keyup",(eventObj)=>{
         
         if(anotherResult[i]!=undefined){
 
-        filteredListElement.innerHTML+=`<p style="font-size: 12px;"><span style="cursor: pointer;" id="searchResult${i}" onclick="bringList('${anotherResult[i].item.school_name}');toggleStyle(${i});">${anotherResult[i].item.school_name} </span></p>`;
+        filteredListElement.innerHTML+=`<p style="font-size: 12px;" id="searchResult${i}"><span style="cursor: pointer;" onclick="bringList('${anotherResult[i].item.school_name}');toggleStyle(${i});">${anotherResult[i].item.school_name} </span></p>`;
 
         }  
 
